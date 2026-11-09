@@ -475,9 +475,11 @@ a { color: inherit; }
 /* The blob layer is one screen tall and sticks to the screen while you scroll the section */
 .about__bg .hero__bg { position: sticky; inset: auto; top: 0; height: 100vh; }
 
-/* Same box style as the Event Details cards (3 in a row), each keeps its own colour */
+/* Same box style as the Event Details cards, each keeps its own colour.
+   1 per row on phones, 2 on tablets, 4 on large screens */
 .stack { display: grid; gap: 20px; margin-top: 48px; }
-@media (min-width: 768px) { .stack { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .stack { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .stack { grid-template-columns: repeat(4, 1fr); } }
 .stack__card {
   padding: 32px;
   border-radius: var(--radius);
@@ -490,7 +492,8 @@ a { color: inherit; }
 .card-1 { --i: 0; background: linear-gradient(135deg, rgb(var(--white-rgb) / .55), rgb(var(--sky-rgb) / .9)); }
 .card-2 { --i: 1; background: linear-gradient(135deg, var(--sky), var(--blue)); }
 /* Text sits over the purple side so white text keeps AA contrast */
-.card-3 { --i: 2; background: linear-gradient(200deg, var(--royal) 0%, var(--purple) 50%); color: var(--white); }
+.card-3 { --i: 2; background: linear-gradient(135deg, var(--lavender), var(--blue)); }
+.card-4 { --i: 3; background: linear-gradient(200deg, var(--royal) 0%, var(--purple) 50%); color: var(--white); }
 
 /* Number shown as a small label, like "DATE" on the event cards */
 .stack__num {
@@ -503,7 +506,7 @@ a { color: inherit; }
   width: 40px; height: 40px;
   fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round;
 }
-.stack__card h3 { order: 3; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.2; }
+.stack__card h3 { order: 3; font-size: clamp(1.3rem, 2vw, 1.55rem); line-height: 1.25; }
 .stack__card p { order: 4; font-size: 1rem; }
 
 /* ---------- 11. Timeline ---------- */
