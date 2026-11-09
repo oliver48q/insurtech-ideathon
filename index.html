@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InsurTech Ideathon 2026 | FYLeaderS</title>
+  <meta name="description" content="InsurTech Ideathon 2026 by FYLeaderS (Fintech Young Leaders Society), Asia Pacific University. Re-imagining protection for every Malaysian." />
+  <meta property="og:title" content="InsurTech Ideathon 2026" />
+  <meta property="og:description" content="Re-imagining protection for every Malaysian." />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Thin scroll progress bar -->
+  <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+  <!-- ============ 1. NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#home" class="nav__logo" data-scroll aria-label="FYLeaderS, back to top">
+        <img src="assets/logo.png" alt="" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Main">
+        <ul>
+          <li><a href="#home" data-scroll>Home</a></li>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#timeline" data-scroll>Timeline</a></li>
+          <li><a href="#event" data-scroll>Event</a></li>
+          <li><a href="#sponsors" data-scroll>Sponsors</a></li>
+          <li><a href="#faq" data-scroll>FAQ</a></li>
+        </ul>
+        <!-- Filled by script.js from CONFIG.registrationUrl -->
+        <span class="js-register" data-label="Register" data-soon="Opening soon"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" id="home" data-section>
+      <!-- Background video (muted + looping). To change it, replace assets/hero-screen.mp4 -->
+      <div class="hero__bg hero__bg--video" aria-hidden="true">
+        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+          <source src="assets/hero-screen.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero__content container">
+        <p class="label js-presenter"></p>
+        <h1 class="hero__title js-split js-event-name"></h1>
+        <p class="hero__tagline js-tagline"></p>
+
+        <!-- Countdown: script.js picks the right state (date + label are in CONFIG) -->
+        <div class="countdown" id="countdown" role="timer"></div>
+
+        <div class="hero__buttons">
+          <span class="js-register" data-label="Register Now"></span>
+          <a href="#faq" class="btn btn--outline" data-scroll>Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. ABOUT ============ -->
+    <section class="section about" id="about" data-section>
+      <!-- Same animated background as the hero (stays behind you while you scroll) -->
+      <div class="about__bg" aria-hidden="true">
+        <div class="hero__bg">
+          <div class="blob blob--1"></div>
+          <div class="blob blob--2"></div>
+          <div class="blob blob--3"></div>
+          <div class="blob blob--4"></div>
+          <div class="sparkles"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p class="label">About the Ideathon</p>
+        <h2 class="section-title js-split">Why InsurTech, why now?</h2>
+        <p class="lead reveal">
+          Insurance should protect everyone, but in Malaysia many people are still left out.
+          In this Ideathon, student teams pitch fresh tech ideas that close three big gaps.
+        </p>
+
+        <div class="stack">
+          <article class="stack__card card-1">
+            <span class="stack__num">01</span>
+            <svg class="stack__icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 6 10 14v16c0 14 9.5 23.5 22 28 12.5-4.5 22-14 22-28V14L32 6z"/>
+              <circle cx="32" cy="27" r="6"/><path d="M21 44c2-6 6-9 11-9s9 3 11 9"/>
+            </svg>
+            <h3>Protection Gap</h3>
+            <p>B40 families and gig workers are left uninsured because premiums are too high and too rigid.</p>
+          </article>
+
+          <article class="stack__card card-2">
+            <span class="stack__num">02</span>
+            <svg class="stack__icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M18 6h28M18 58h28"/><path d="M20 6c0 14 24 14 24 26S20 44 20 58M44 6c0 14-24 14-24 26s24 12 24 26"/>
+              <path d="M26 50h12"/>
+            </svg>
+            <h3>Operational Friction</h3>
+            <p>Claims still take 7 to 21 days, with lots of paperwork and manual checks.</p>
+          </article>
+
+          <article class="stack__card card-3">
+            <span class="stack__num">03</span>
+            <svg class="stack__icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M8 12h30a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H22l-8 8v-8H8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z"/>
+              <path d="M46 24h10a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4h-4v7l-7-7h-9"/>
+              <path d="M17 24h4M27 24h4"/>
+            </svg>
+            <h3>Customer Disconnect</h3>
+            <p>People only talk to their insurer when something goes wrong, so trust stays low.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. TIMELINE ============ -->
+    <section class="section timeline" id="timeline" data-section>
+      <div class="timeline__pin">
+        <div class="container timeline__head">
+          <p class="label">Timeline</p>
+          <h2 class="section-title js-split">Your journey, phase by phase</h2>
+        </div>
+        <div class="timeline__viewport">
+          <div class="timeline__line" aria-hidden="true"><div class="timeline__line-fill"></div></div>
+          <ol class="timeline__track" id="timelineTrack"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. EVENT DETAILS ============ -->
+    <section class="section event" id="event" data-section>
+      <div class="container">
+        <p class="label">Event Details</p>
+        <h2 class="section-title js-split">Save the date</h2>
+
+        <div class="event__grid">
+          <div class="glass event__card pop">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <p class="label">Date</p>
+            <p class="event__value js-date-text"></p>
+          </div>
+          <div class="glass event__card pop">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <p class="label">Time</p>
+            <p class="event__value js-time-text"></p>
+          </div>
+          <div class="glass event__card pop">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <p class="label">Venue</p>
+            <p class="event__value js-venue-name"></p>
+            <p class="event__sub js-venue-address"></p>
+          </div>
+        </div>
+
+        <div class="event__buttons" id="eventButtons"></div>
+      </div>
+    </section>
+
+    <!-- ============ 7. SPONSORS ============ -->
+    <section class="section sponsors" id="sponsors" data-section>
+      <div class="container">
+        <p class="label">Sponsors</p>
+        <h2 class="section-title js-split">Powered by our Sponsors</h2>
+        <div id="sponsorTiers"></div>
+      </div>
+      <div class="logo-marquee" id="logoMarquee" aria-hidden="true">
+        <div class="logo-marquee__track" id="logoMarqueeTrack"></div>
+      </div>
+      <div class="container sponsors__cta">
+        <a class="btn btn--outline btn--small" id="becomeSponsor" href="#">Become a sponsor</a>
+      </div>
+    </section>
+
+    <!-- ============ 8. FAQ (questions come from CONFIG.faq in script.js) ============ -->
+    <section class="section faq" id="faq" data-section>
+      <div class="container faq__inner">
+        <p class="label">FAQ</p>
+        <h2 class="section-title js-split">Frequently asked questions</h2>
+        <div class="faq__list" id="faqList"></div>
+        <div class="faq__cta">
+          <span class="js-register" data-label="Register Now"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 9. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__social" id="footerSocial"></div>
+    </div>
+    <p class="footer__copy">&copy; 2026 FYLeaderS, Asia Pacific University</p>
+  </footer>
+
+  <!-- ============ LIBRARIES (CDN) ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- Our code -->
+  <script src="script.js"></script>
+</body>
+</html>
